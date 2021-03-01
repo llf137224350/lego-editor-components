@@ -1,7 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 import LText from '@/components/LText';
 import { textDefaultProps } from '../../src/defaultProps';
-import { after } from 'lodash-es';
 
 describe('LText.vue', () => {
   const {location} = window;
@@ -11,11 +10,12 @@ describe('LText.vue', () => {
       value: {
         href: ''
       }
-    })
+    });
   });
   afterEach(() => {
     window.location = location;
   });
+
   it('测试基本样式', () => {
     const msg = 'new message';
     const wrapper = shallowMount(LText, {

@@ -1,19 +1,19 @@
 {
   "name": "lego-editor-components",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "private": false,
   "author": "い 狂奔的蜗牛",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run clean && npm run build:esm && npm run build:umd",
-    "test:unit": "npx vue-cli-service test:unit",
-    "lint": "npx vue-cli-service lint --max-warnings 5",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint --max-warnings 5",
     "build:esm": "rollup --config build/rollup.esm.config.js",
     "build:umd": "rollup --config build/rollup.umd.config.js",
     "clean": "rimraf ./dist",
     "prepublishOnly": "npm run lint && npm run test && npm run build",
-    "test": "npx vue-cli-service test:unit",
-    "test:watch": "npx vue-cli-service test:unit --watch"
+    "test": "vue-cli-service test:unit",
+    "test:watch": "vue-cli-service test:unit --watch"
   },
   "main": "dist/lego-editor-components.umd.js",
   "module": "dist/lego-editor-components.esm.js",

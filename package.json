@@ -1,26 +1,22 @@
 {
   "name": "lego-editor-components",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "private": false,
   "author": "い 狂奔的蜗牛",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run clean && npm run build:esm && npm run build:umd",
-    "test:watch": "vue-cli-service test:unit --watch",
-    "test": "vue-cli-service test:unit",
+    "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint --max-warnings 5",
     "build:esm": "rollup --config build/rollup.esm.config.js",
     "build:umd": "rollup --config build/rollup.umd.config.js",
     "clean": "rimraf ./dist",
-    "prepublishOnly": "npm run lint && npm run build"
+    "prepublishOnly": "npm run lint && npm run test && npm run build",
+    "test": "vue-cli-service test:unit",
+    "test:watch": "vue-cli-service test:unit --watch"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
-  },
-  "main": "dist/editor-components.umd.js",
-  "module": "dist/editor-components.esm.js",
+  "main": "dist/lego-editor-components.umd.js",
+  "module": "dist/lego-editor-components.esm.js",
   "files": [
     "dist"
   ],
@@ -58,6 +54,11 @@
   },
   "peerDependencies": {
     "vue": "^3.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run test"
+    }
   },
   "keywords": [
     "Component",

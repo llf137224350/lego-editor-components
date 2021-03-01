@@ -21,7 +21,7 @@ export default {
     nodeResolve(),
     typescript({tsconfigOverride: overrides}),
     vue(),
-    css({output: 'editor-components.css'})
+    css({output: 'lego-editor-components.css'})
   ],
   external: ['vue', 'lodash-es']
 };

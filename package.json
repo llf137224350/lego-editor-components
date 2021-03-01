@@ -13,7 +13,8 @@
     "clean": "rimraf ./dist",
     "prepublishOnly": "npm run lint && npm run test && npm run build",
     "test": "vue-cli-service test:unit",
-    "test:watch": "vue-cli-service test:unit --watch"
+    "test:watch": "vue-cli-service test:unit --watch",
+    "postinstall": "unset NODE_ENV"
   },
   "main": "dist/lego-editor-components.umd.js",
   "module": "dist/lego-editor-components.esm.js",

@@ -62,11 +62,11 @@ export const isEditingProp = {
     type: Boolean,
     default: false
   }
-}
+};
 // l-image样式表
 export const imageStylePropsNames = without(Object.keys(imageDefaultProps), 'actionType', 'url', 'src');
 // shape的样式属性
-export const shapeStylePropsNames = without(Object.keys(imageDefaultProps), 'actionType', 'url')
+export const shapeStylePropsNames = without(Object.keys(imageDefaultProps), 'actionType', 'url');
 // 得到所有属性
 export const transformToComponentProps = (props: CommonComponentProps) => {
   const mapProps = mapValues(props, (item: any) => {
@@ -78,5 +78,5 @@ export const transformToComponentProps = (props: CommonComponentProps) => {
   return {
     ...mapProps,
     ...isEditingProp
-  }
+  };
 };

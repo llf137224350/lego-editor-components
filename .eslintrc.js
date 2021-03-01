@@ -18,6 +18,7 @@ module.exports = {
     '@typescript-eslint/triple-slash-reference': 'off',
     'quotes': ['error', 'single', {'avoidEscape': true}],
     'vue/no-setup-props-destructure': 'off',
-    '@typescript-eslint/consistent-type-assertions': 'off'
+    '@typescript-eslint/consistent-type-assertions': 'off',
+    '@typescript-eslint/no-explicit-any': 'off'
   }
-}
+};

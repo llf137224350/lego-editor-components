@@ -1,8 +1,7 @@
 {
   "name": "lego-editor-components",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "private": false,
-
   "author": "い 狂奔的蜗牛",
   "scripts": {
     "serve": "vue-cli-service serve",

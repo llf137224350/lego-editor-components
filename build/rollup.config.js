@@ -1,6 +1,7 @@
 import vue from 'rollup-plugin-vue';
 import css from 'rollup-plugin-css-only';
 import typescript from 'rollup-plugin-typescript2';
+import excludeDependenciesFromBundle from 'rollup-plugin-exclude-dependencies-from-bundle'
 import {nodeResolve} from '@rollup/plugin-node-resolve';
 import {name} from '../package.json';
 
@@ -19,6 +20,7 @@ export default {
   },
   plugins: [
     nodeResolve(),
+    excludeDependenciesFromBundle({ peerDependencies: true, dependencies: false }),
     typescript({tsconfigOverride: overrides}),
     vue(),
     css({output: 'lego-editor-components.css'})

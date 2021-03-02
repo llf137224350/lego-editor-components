@@ -13,14 +13,17 @@ import useComponentCommon from '../../hooks/useComponentCommon';
 import { textDefaultProps, transformToComponentProps, textStylePropNames } from '@/defaultProps';
 // 得到组件props定义的属性
 const defaultProps = transformToComponentProps(textDefaultProps);
+const extraProps = {
+  tag: {
+    type: String,
+    default: 'div'
+  },
+  ...defaultProps
+};
 export default defineComponent({
   name: 'LText',
   props: {
-    tag: {
-      type: String,
-      default: 'div'
-    },
-    ...defaultProps
+    ...extraProps
   },
   setup(props) {
     // 从传入的属性中过滤出样式属性

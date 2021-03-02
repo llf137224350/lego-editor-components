@@ -1,10 +1,14 @@
 import { mapValues, without } from 'lodash-es';
-import TextComponentProps from '../types/TextComponentProps';
-import CommonComponentProps from '../types/CommonComponentProps';
-import ImageComponentProps from '../types/ImageComponentProps';
-import ShapeComponentProps from '../types/ShapeComponentProps';
+import TextProps from '../types/TextComponentProps';
+import CommonProps from '../types/CommonComponentProps';
+import ImageProps from '../types/ImageComponentProps';
+import ShapeProps from '../types/ShapeComponentProps';
 
-export const commonDefaultProps: CommonComponentProps = {
+export type TextComponentProps = TextProps;
+export type CommonComponentProps = CommonProps;
+export type ImageComponentProps = ImageProps;
+export type ShapeComponentProps = ShapeProps;
+export const commonDefaultProps: CommonProps = {
   // actions
   actionType: '',
   url: '',

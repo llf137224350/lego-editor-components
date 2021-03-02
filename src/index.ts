@@ -2,7 +2,6 @@ import { App } from 'vue';
 import LText from '@/components/LText';
 import LImage from '@/components/LImage';
 import LShape from '@/components/LShape';
-
 const components = [LText, LImage,LShape];
 // 插件入口
 const install = (app: App) => {
@@ -17,5 +16,6 @@ export {
   LShape,
   install
 };
+export * from './defaultProps';
 // 默认导出
 export default {install};

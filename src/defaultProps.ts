@@ -3,7 +3,6 @@ import TextProps from '../types/TextComponentProps';
 import CommonProps from '../types/CommonComponentProps';
 import ImageProps from '../types/ImageComponentProps';
 import ShapeProps from '../types/ShapeComponentProps';
-
 export type TextComponentProps = TextProps;
 export type CommonComponentProps = CommonProps;
 export type ImageComponentProps = ImageProps;
@@ -64,7 +63,7 @@ export const textStylePropNames = without(Object.keys(textDefaultProps), 'action
 export const isEditingProp = {
   isEditing: {
     type: Boolean,
-    default: false
+    default: true
   }
 };
 // l-image样式表

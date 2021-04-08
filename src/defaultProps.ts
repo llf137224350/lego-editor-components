@@ -83,3 +83,5 @@ export const transformToComponentProps = (props: CommonComponentProps) => {
     ...isEditingProp
   };
 };
+
+export type AllComponentProps = TextComponentProps & ImageComponentProps & ShapeComponentProps
